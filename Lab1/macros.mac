@@ -1,0 +1,30 @@
+.macro display add, len
+    lea ecx, \add
+    mov edx, \len
+    mov eax, 4
+    mov ebx, 1
+    int 0x80
+.endm
+
+.macro read add, len
+    lea ecx, \add
+    mov edx, \len
+    mov eax, 3
+    mov ebx, 2
+    int 0x80
+
+.endm
+
+.macro exit 
+    mov eax, 1
+    int 0x80
+
+.endm
+
+.macro add n1, n2
+    lea esi, \n1
+    lea edi, \n2
+
+    add [edi], [esi]
+    sub [edi], 0x30
+.endm
