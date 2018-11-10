@@ -5,7 +5,7 @@
 
 .data
     src:
-        .byte 0x45
+        .byte 69
     
     dst: 
         .ds 10
@@ -34,10 +34,10 @@
         up:
             rcl al, 1
             jc add
-            mov byte ptr [edi], 0
+            mov byte ptr [edi], 0x30
             jmp skip
             add:
-                mov byte ptr [edi], 1
+                mov byte ptr [edi], 0x31
             skip:
                 inc edi
                 dec cx
