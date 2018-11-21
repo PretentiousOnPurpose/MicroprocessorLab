@@ -1,4 +1,4 @@
-# Display the product of two 16 bit number taken from keyboard (STDIN)
+# Display the product of two 16 bit numbers taken as input from keyboard (STDIN)
 # author: chawat
 # date: 20-11-2018
 
